@@ -76,6 +76,8 @@
   "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-plugin-transform-runtime": "^6.15.0",
@@ -94,7 +96,9 @@
     "html-webpack-plugin": "^2.22.0",
     "imports-loader": "^0.7.0",
     "ip": "^1.1.2",
+    "isomorphic-fetch": "^2.2.1",
     "json-loader": "^0.5.4",
+    "mongoose": "^4.9.2",
     "node-sass": "^4.0.0",
     "normalize.css": "^5.0.0",
     "postcss-loader": "^1.1.0",

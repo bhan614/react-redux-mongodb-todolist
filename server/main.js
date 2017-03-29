@@ -5,12 +5,22 @@ const webpack = require('webpack')
 const webpackConfig = require('../config/webpack.config')
 const project = require('../config/project.config')
 const compress = require('compression')
+const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
+
+const index = require('./routers/index')
+
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost:27017/todo')
 
 const app = express()
 
 // Apply gzip compression
 app.use(compress())
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
 // ------------------------------------
 // Apply Webpack HMR Middleware
 // ------------------------------------
@@ -36,7 +46,7 @@ if (project.env === 'development') {
   // of development since this directory will be copied into ~/dist
   // when the application is compiled.
   app.use(express.static(project.paths.public()))
-
+  app.use('/', index)
   // This rewrites all routes requests to the root /index.html file
   // (ignoring file requests). If you want to implement universal
   // rendering, you'll want to remove this middleware.

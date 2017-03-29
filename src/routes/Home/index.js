@@ -1,4 +1,4 @@
-import HomeView from './components/HomeView'
+import HomeView from './container/homecontainer';
 
 // Sync route definition
 export default {

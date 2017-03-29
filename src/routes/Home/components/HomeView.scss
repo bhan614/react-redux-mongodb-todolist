@@ -1,5 +1,95 @@
-.duck {
-  display: block;
-  width: 120px;
-  margin: 1.5rem auto;
+
+body {
+  	font-size: 16px;
+  	font-family: 'comic sans';
+  	color: #fff;
+  	background-image: url(../assets/bg.jpg);
+    background-size: cover;
+}
+
+button {
+	outline: none;
+	cursor: pointer;
+}
+
+.todo-container {
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	width: 400px;
+	height: 475px;
+  margin-left: -200px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 20px;
+	border: 1px solid #666;
+	border-radius: 5px;
+	box-shadow: 5px 5px 20px #000;
+	background: rgba(60,60,60,0.3);
+}
+
+.header h2 {
+	padding: 0;
+	margin: 0;
+	font-size: 25px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.todoForm {
+	margin: 20px 0 30px 0;
+}
+
+.todoContent {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 3px;
+  color: #333;
+}
+
+.tooltip {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF4A60;
+}
+
+.todoItem {
+	margin-bottom: 10px;
+	color: #333;
+	background: #fff;
+	border-radius: 3px;
+}
+
+.todoItem p {
+	position: relative;
+	padding: 8px 10px;
+	font-size: 12px;
+  text-align: left;
+}
+
+.itemTime {
+	position: absolute;
+	right: 40px;
+}
+
+.delBtn {
+	display: none;
+	position: absolute;
+	right: 3px;
+	bottom: 6px;
+	background: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+.todoItem p:hover .delBtn {
+	display: block;
+}
+
+.delBtn img {
+	height: 20px;
 }
