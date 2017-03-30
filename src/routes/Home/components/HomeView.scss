@@ -38,6 +38,7 @@ button {
 
 .todoForm {
 	margin: 20px 0 30px 0;
+  position: relative;
 }
 
 .todoContent {
@@ -55,6 +56,10 @@ button {
 	font-size: 14px;
 	font-weight: bold;
 	color: #FF4A60;
+  position: absolute;
+  left: 110px;
+  bottom: -25px;
+  opacity: 1;
 }
 
 .todoItem {

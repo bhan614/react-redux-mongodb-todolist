@@ -15,6 +15,15 @@ class HomeView extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
+    if(this.refs.content.value == "") {
+      this.refs.content.focus();
+      this.setState({
+        showTooltip: true
+      });
+      console.log(this.state.showTooltip);
+      return ;
+    }
+
     let month = new Date().getMonth() + 1;
     let date = new Date().getDate();
 
@@ -24,6 +33,8 @@ class HomeView extends React.Component {
       id: this.props.todoList.length + 1,
     };
     this.props.addTodo(newItem);
+    this.refs.content.value = "";
+    this.setState({ showTooltip: false });
   }
 
   onDeleteItem(id) {
